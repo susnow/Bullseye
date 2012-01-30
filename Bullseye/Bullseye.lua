@@ -36,12 +36,17 @@ local onUpdate = function(obj,elapsed,interval,expires,minV,maxV)
 	if obj.nextUpdate > interval then
 		if (expires - GetTime() >= 0) and (expires - GetTime() > (minV + correctionValue)) then
 			obj.notice:SetText(data[L].ready)
+			obj.Overlay:SetScript("OnKeyDown",function(self) end)
 		elseif (expires - GetTime() > minV ) and (expires - GetTime() < maxV) then
 			obj.notice:SetText(data[L].actionString)
 			obj.sIcon:SetAlpha(1)
+			obj.Overlay:SetScript("OnKeyDown",nil)	
+			obj.Overlay:UnregisterAllEvents()
 		elseif expires - GetTime() <= 0 then
 			obj.notice:SetText("")
 			obj.sIcon:SetAlpha(0)
+			obj.Overlay:SetScript("OnKeyDown",nil)
+			obj.Overlay:UnregisterAllEvents()
 			obj:SetScript("OnUpdate",nil)
 		end
 	end
@@ -74,6 +79,14 @@ sIcon:SetTexture(spellTex)
 sIcon:SetPoint("RIGHT",Bullseye,"LEFT")
 sIcon:SetAlpha(0)
 Bullseye.sIcon = sIcon
+
+--overlay
+local Overlay = CreateFrame("Frame","Overlay",UIParent)
+Overlay:EnableKeyboard(true)
+Overlay:SetFrameStrata("TOOLTIP")
+Overlay:SetAllPoints(UIParent)
+Bullseye.Overlay = Overlay
+
 
 --handler
 Bullseye.nextUpdate = 0

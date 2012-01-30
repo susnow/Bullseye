@@ -1,10 +1,10 @@
 ## Interface: 40300
 ## Author: susnow
 ## Author-zhCN:素雪@风暴之眼
-## Title: Bullseye! - General mode
-## Title-zhCN: 打爆靶心! - 普通模式
-## Notes: Tell you what is the best timing to cancel magic wings buff 
-## Notes-zhCN: 在你玩炮弹飞人的游戏时 用醒目的文字和图标提示你取消魔法双翼BUFF的最佳时机
+## Title: Bullseye! - No brain mode
+## Title-zhCN: 打爆靶心! - 无脑模式
+## Notes: You just need to click the "1" button when you're in the moondark cannon
+## Notes-zhCN: 简单的说 在你被装进大炮的时候无脑按1就可以了
 ## Version: 1.01
 
 Bullseye.lua

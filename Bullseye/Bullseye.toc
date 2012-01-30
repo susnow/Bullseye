@@ -1,0 +1,10 @@
+## Interface: 40300
+## Author: susnow
+## Author-zhCN:素雪@风暴之眼
+## Title: Bullseye! - General mode
+## Title-zhCN: 打爆靶心! - 普通模式
+## Notes: Tell you what is the best timing to cancel magic wings buff 
+## Notes-zhCN: 在你玩炮弹飞人的游戏时 用醒目的文字和图标提示你取消魔法双翼BUFF的最佳时机
+## Version: 1.01
+
+Bullseye.lua
